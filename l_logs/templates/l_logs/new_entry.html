@@ -1,0 +1,13 @@
+{% extends "l_logs/base.html" %}
+{% load bootstrap3 %}
+{% block content %}
+<p><a href="{% url 'l_logs:topic' topic.id %}">{{ topic }}</a></p>
+
+<p>Add a new entry:</p>
+<form action="{% url 'l_logs:new_entry' topic.id %}" method="post" class="form">
+  {% csrf_token %}
+  {% bootstrap_form form %}
+  <button name="submit">Add Entry</button>
+</form>
+
+{% endblock content %}
