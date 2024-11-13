@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'l_logs',
     'users',
     #Third party
-    'bootstrap3',
+    'bootstrap5',
 ]
 
 MIDDLEWARE = [
